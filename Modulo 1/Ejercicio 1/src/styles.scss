@@ -1,0 +1,170 @@
+
+.container-1 {
+   $myColor: red;
+   color: rgb(128, 169, 202);
+   display: flex;
+   justify-content: space-around;
+   grid-gap: 10px;
+   margin-bottom: 10px;
+
+   .box {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid grey;
+      border-radius: 3px;
+   }
+
+   .darken-1 {
+      background-color: darken($myColor, 10%);
+   }
+   
+   .darken-2 {
+      background-color: darken($myColor, 20%);
+   }
+   
+   .darken-3 {
+      background-color: darken($myColor, 30%);
+   }
+   
+   .darken-4 {
+      background-color: darken($myColor, 40%);
+   }
+   
+   .base-color { 
+      background-color: $myColor;
+   }
+   
+   .lighten-1 {
+      background-color: lighten($myColor, 10%);
+   }
+   
+   .lighten-2 {
+      background-color: lighten($myColor, 20%);   
+   }
+   
+   .lighten-3 {
+      background-color: lighten($myColor, 30%);   
+   }
+   
+   .lighten-4 {
+      background-color: lighten($myColor, 40%);   
+   }
+}
+
+.container-2 {
+   $myColor: blue;
+   color: rgb(218, 230, 119);
+   display: flex;
+   justify-content: space-around;
+   grid-gap: 10px;
+   margin-bottom: 10px;
+
+   .box {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid grey;
+      border-radius: 3px;
+
+      
+   }
+
+   .darken-1 {
+      background-color: darken($myColor, 10%);
+   }
+   
+   .darken-2 {
+      background-color: darken($myColor, 20%);
+   }
+   
+   .darken-3 {
+      background-color: darken($myColor, 30%);
+   }
+   
+   .darken-4 {
+      background-color: darken($myColor, 40%);
+   }
+   
+   .base-color { 
+      background-color: $myColor;
+   }
+   
+   .lighten-1 {
+      background-color: lighten($myColor, 10%);
+   }
+   
+   .lighten-2 {
+      background-color: lighten($myColor, 20%);   
+   }
+   
+   .lighten-3 {
+      background-color: lighten($myColor, 30%);   
+   }
+   
+   .lighten-4 {
+      background-color: lighten($myColor, 40%);   
+   }
+}
+
+.container-3 {
+   $myColor: green;
+   color: rgb(211, 132, 231);
+   display: flex;
+   justify-content: space-around;
+   grid-gap: 10px;
+   margin-bottom: 10px;
+
+   .box {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid grey;
+      border-radius: 3px;
+
+      
+   }
+
+   .darken-1 {
+      background-color: darken($myColor, 10%);
+   }
+   
+   .darken-2 {
+      background-color: darken($myColor, 20%);
+   }
+   
+   .darken-3 {
+      background-color: darken($myColor, 30%);
+   }
+   
+   .darken-4 {
+      background-color: darken($myColor, 40%);
+   }
+   
+   .base-color { 
+      background-color: $myColor;
+   }
+   
+   .lighten-1 {
+      background-color: lighten($myColor, 10%);
+   }
+   
+   .lighten-2 {
+      background-color: lighten($myColor, 20%);   
+   }
+   
+   .lighten-3 {
+      background-color: lighten($myColor, 30%);   
+   }
+   
+   .lighten-4 {
+      background-color: lighten($myColor, 40%);   
+   }
+}
+
