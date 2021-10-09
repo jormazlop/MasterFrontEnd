@@ -1,0 +1,56 @@
+//@import '../themes/redtheme.scss';
+//@import '../themes/bluetheme.scss';
+@import '../themes/greentheme.scss';
+
+.container-theme {
+   display: flex;
+   flex-direction: column;
+
+   p {
+      margin: 0 0 15px 0;
+   }
+
+}
+
+.box {
+   height: 100px;
+   width: 100px;
+   border: 1px solid black;
+   border-radius: $borderRadius;
+   margin-bottom: 10px;
+
+   span {
+      position: fixed;
+      padding: 15px;
+      max-width: 60px;
+   }
+
+}
+
+.base {
+   background-color: $themeColor;
+}
+
+.important {
+   background-color: darken($themeColor, 30%);
+}
+
+.warning {
+   background-color: lighten($themeColor, 30%);
+}
+
+.principal-font {
+   font-family: $primaryFont;
+}
+
+.secondary-font {
+   font-family: $secondaryFont;
+}
+
+.shadow {
+   margin-left: 20px;
+   height: 80px;
+   width: 100px;
+   box-shadow: $shadowBox;
+   font-weight: bold;
+}
