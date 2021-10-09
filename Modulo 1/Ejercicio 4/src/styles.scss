@@ -1,0 +1,78 @@
+
+.card-list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   gap: 40px;
+}
+
+.container {
+
+   $myColor: #a6c068;
+
+   display: inline-grid;
+   grid-template-columns: 320px;
+   grid-template-rows: 230px 70px 140px 30px 60px;
+   grid-template-areas: 
+   "imagen"
+   "title"
+   "descripcion"
+   "publicacion"
+   "informacion";
+
+   border: 1px solid black;
+   box-shadow: 0 0 0 15px #ebe7e7;
+   font-family: sans-serif;
+   margin-bottom: 50px;
+
+   .imagen {
+      grid-area: imagen;
+
+      img {
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   .title {
+      grid-area: title;
+      padding: 0 10px;
+   }
+
+   .descripcion {
+      grid-area: descripcion;
+      padding: 0 10px;
+   }
+
+   .publicacion {
+      grid-area: publicacion;
+      justify-self: end;
+      margin-right: 20px;
+
+      span {
+         color: $myColor;
+      }
+   }
+
+   .informacion {
+      grid-area: informacion;
+
+      button {
+         width: 90%;
+         background-color: $myColor;
+         border: none;
+         color: white;
+         padding: 15px 32px;
+         margin-left: 15px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+
+         &:hover {
+            cursor: pointer;
+            background-color: darken($myColor, 10%)
+         }
+      }
+   }
+}
