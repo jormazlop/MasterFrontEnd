@@ -1,0 +1,27 @@
+.menu {
+
+   display: flex;
+   justify-content: space-around;
+   font-size: 20px;
+
+   @media (max-width: 600px) {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   .menu-item {
+
+      $menuColor: darkcyan;
+
+      background-color: $menuColor;
+      width: 100%;
+      padding: 20px;
+      color: white;
+     
+
+      &:hover {
+         background-color: darken($menuColor, 10%);
+         cursor: pointer;
+      }
+   }
+}
