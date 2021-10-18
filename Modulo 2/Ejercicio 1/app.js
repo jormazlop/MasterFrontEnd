@@ -19,7 +19,6 @@ const last = array => {
 
 const array = ['Primer elemento', 'Segundo elemento', 'Tercer elemento', 'Cuarto elemento'];
 
-
 console.log(head(array));
 console.log(tail(array));
 console.log(init(array));
