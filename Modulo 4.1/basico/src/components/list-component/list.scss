@@ -1,0 +1,31 @@
+@import '../../shared/colors.scss';
+
+.member-container {
+   display: flex;
+   width: 600px;
+   justify-content: space-between;
+   border: 1px solid black;
+   border-radius: 10px;
+   padding: 10px 50px;
+   align-items: center;
+   margin: 20px 50px;
+
+   .member-id {
+      font-size: 20px;
+   }
+
+   .member-name {
+      font-size: 20px;
+   }
+
+   .member-avatar {
+      width: 90px;
+      border-radius: 50%;
+   }
+
+   &:hover {
+      cursor: pointer;
+      border: 1px solid $lemonPrimaryCodeColor;
+   }
+
+}

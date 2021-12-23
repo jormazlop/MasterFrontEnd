@@ -1,0 +1,42 @@
+@import '../../shared/colors.scss';
+
+.search-container {
+   padding: 40px;
+   width: 400px;
+   display: flex;
+   justify-content: space-around;
+
+   .search-input {
+      width: 200px;
+      background-color: $greyColor;
+      border: none;
+      border-radius: 50px;
+      padding: 20px;
+      box-shadow: 2px 2px 5px 0px $darkenGreyColor10;
+      font-family: 'Poppins', sans-serif;
+
+      &:focus {
+         outline: none;
+      }
+
+      &::placeholder {
+         color: $darkenGreyColor20;
+      }
+   }
+
+   .search-button {
+      padding: 15px 40px;
+      border-radius: 50px;
+      background-color: $lemonSecondaryCodeColor;
+      color: white;
+      font-weight: bold;
+      border: none;
+      box-shadow: 2px 2px 5px 0px $darken10lemonSecondaryCodeColor;
+
+      &:hover {
+         cursor: pointer;
+         background-color: $darken10lemonSecondaryCodeColor;
+      }
+   }
+
+}
