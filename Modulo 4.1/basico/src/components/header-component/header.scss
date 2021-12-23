@@ -1,7 +1,8 @@
 @import '../../shared/colors.scss';
 
 .header {
-   height: 100px;
+   height: 80px;
    width: 100%;
    background-color: $lemonSecondaryCodeColor;
+   box-shadow: 1px 1px 10px darken($lemonSecondaryCodeColor, 20);
 }
