@@ -3,7 +3,8 @@ import './list.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import Tooltip from '@mui/material/Tooltip';
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { CircularProgress } from "@mui/material";
 
 interface MemberEntity {
    id: string;
@@ -25,7 +26,11 @@ export const List: React.FC<SearchProps> = (props: SearchProps) => {
 
    const [members, setMembers] = React.useState([]);
 
+   const [isLoading, setIsLoading] = React.useState<boolean>(true);
+
    React.useEffect(() => {    
+
+      setIsLoading(true);
       
       const url = 'https://api.github.com/orgs/' + props.search + '/members';
       
@@ -37,6 +42,7 @@ export const List: React.FC<SearchProps> = (props: SearchProps) => {
             } else {
                 setMembers([]);
             }
+            setIsLoading(false);
         });
    }, [props.search]);
 
@@ -48,20 +54,26 @@ export const List: React.FC<SearchProps> = (props: SearchProps) => {
 
       const list = [];
 
-      for(let member of members) {
-         list.push(
-         <div key={member.id} className="member-container" onClick={e => detailMember(member.login)}>
-            <Tooltip title="User detail" placement="top">
-               <div>
-                  <FontAwesomeIcon icon={faUser} size="2x"/>
-               </div>
-            </Tooltip>
-            <h2 className="member-name">{member.login}</h2>
-            <img className="member-avatar" src={member.avatar_url} alt={member.login} />
-         </div>);
-      }
+      if(!isLoading) {
 
-      return <>{list}</>;
+         for(let member of members) {
+            list.push(
+            <div key={member.id} className="member-container" onClick={e => detailMember(member.login)}>
+               <Tooltip title="User detail" placement="top">
+                  <div>
+                     <FontAwesomeIcon icon={faUser} size="2x"/>
+                  </div>
+               </Tooltip>
+               <h2 className="member-name">{member.login}</h2>
+               <img className="member-avatar" src={member.avatar_url} alt={member.login} />
+            </div>);
+         }
+
+         return <>{list}</>;
+
+      } else {
+         return <><CircularProgress color="inherit" /></>;
+      }
    }
 
    return <div className="list-container">

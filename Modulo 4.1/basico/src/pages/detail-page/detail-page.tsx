@@ -2,6 +2,9 @@ import React from "react";
 import './detail-page.scss';
 import { Header } from "../../components/header-component/header";
 import { useLocation } from "react-router-dom";
+import { CircularProgress } from "@mui/material";
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface MyState {
   user?: string
@@ -50,6 +53,8 @@ export const DetailPage: React.FC = () => {
 
   const [detailMember, setDetailMember] = React.useState<DetailInfo>({});
 
+  const [isLoading, setIsLoading] = React.useState<boolean>(true);
+
   React.useEffect(() => {    
       
     const url = 'https://api.github.com/users/' + user;
@@ -60,14 +65,33 @@ export const DetailPage: React.FC = () => {
               data = await data.json();
               console.log(data);
               setDetailMember(data);
+              setIsLoading(false);
           }
       });
   }, [user]);
 
-
+  const detailInfo = () => {
+    if(!isLoading) {
+      return  <>
+                <img className="detail-avatar" src={detailMember.avatar_url} alt="Profile" />
+                {detailMember.name? <div>Nombre : {detailMember.name}</div> : null}
+                {detailMember.id? <div>Id : {detailMember.id}</div> : null}
+                {detailMember.company? <div>Compañia : {detailMember.company}</div> : null}
+                {detailMember.location? <div>Lugar : {detailMember.location}</div> : null}
+                {detailMember.followers? <div>Numero de seguidores : {detailMember.followers}</div> : null}
+                {detailMember.type? <div>Tipo de usuario : {detailMember.type}</div> : null}
+                {detailMember.html_url? 
+                  <a href={detailMember.html_url}><FontAwesomeIcon icon={faGithub} size="2x" color="grey"/></a> : null}
+              </>;
+    } else {
+      return <><CircularProgress color="inherit" /></>;
+    }
+  }
 
   return <div className="page-container">   
-           <Header/>
-           <div>{detailMember.login}</div>
+            <Header/>
+            <div className="detail-container">
+              {detailInfo()}
+            </div>
          </div>;
 }

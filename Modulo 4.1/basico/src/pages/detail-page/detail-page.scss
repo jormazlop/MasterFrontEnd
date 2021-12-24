@@ -1,1 +1,16 @@
 @import '../../shared/colors.scss';
+
+.detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    gap: 20px;
+    height: calc(100vh - 80px);
+
+    .detail-avatar {
+        width: 125px;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+}

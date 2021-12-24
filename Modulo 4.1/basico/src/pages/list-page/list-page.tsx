@@ -6,9 +6,9 @@ import { Header } from "../../components/header-component/header";
 
 export const ListPage: React.FC = () => {
 
-  const [search, setSearch] = React.useState<String>('lemoncode');
+  const [search, setSearch] = React.useState<string>('lemoncode');
 
-  const handleSearch = (text) => {
+  const handleSearch = (text: string) => {
     setSearch(text);
   }
 
