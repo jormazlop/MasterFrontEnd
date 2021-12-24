@@ -1,3 +1,20 @@
+@import './shared/colors.scss';
+
 body {
    margin: 0;
+
+   .page-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+   }
+
+   .spinner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+   }
+   
 }

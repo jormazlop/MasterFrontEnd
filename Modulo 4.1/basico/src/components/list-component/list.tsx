@@ -6,19 +6,9 @@ import Tooltip from '@mui/material/Tooltip';
 import { useNavigate } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 
-interface MemberEntity {
-   id: string;
-   login: string;
-   avatar_url: string;
-}
-
 interface SearchProps {
    search: string
 }
-
-interface MyState {
-   user: string
- }
 
 export const List: React.FC<SearchProps> = (props: SearchProps) => {
 
@@ -72,7 +62,9 @@ export const List: React.FC<SearchProps> = (props: SearchProps) => {
          return <>{list}</>;
 
       } else {
-         return <><CircularProgress color="inherit" /></>;
+         return <div className="spinner">
+                  <CircularProgress color="inherit" />
+                </div>;
       }
    }
 
