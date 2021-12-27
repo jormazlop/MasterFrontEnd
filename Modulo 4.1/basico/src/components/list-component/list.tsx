@@ -25,18 +25,19 @@ export const List: React.FC<SearchProps> = (props: SearchProps) => {
       const url = 'https://api.github.com/orgs/' + props.search + '/members';
       
       fetch(url)
+         .then(response => response.json())
          .then(async (data) => {
-            if (data.ok) {
-                data = await data.json();
-                setMembers(data);  
-            } else {
-                setMembers([]);
-            }
+            setMembers(data);  
             setIsLoading(false);
-        });
+        })
+        .catch(error => {
+         setMembers([]); 
+         setIsLoading(false);
+      });
    }, [props.search]);
 
    const detailMember = (login: string) => {
+      localStorage.setItem('mySearch', props.search);
       navigate("/detail" , { state: {user: login}});
    }
 

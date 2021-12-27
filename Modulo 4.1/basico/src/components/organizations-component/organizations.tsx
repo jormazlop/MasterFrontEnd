@@ -70,7 +70,6 @@ export const Organizations: React.FC = () => {
         }
 
         const handleOrganization = (organization: string) => {
-            localStorage.setItem('mySearch', organization);
             navigate("/", { state: {lastSearch: organization}});
         }
 

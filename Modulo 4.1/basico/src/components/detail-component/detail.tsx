@@ -35,13 +35,15 @@ export const Detail: React.FC = () => {
     const url = 'https://api.github.com/users/' + user;
     
     fetch(url)
+       .then(response => response.json())
        .then(async (data) => {
-          if (data.ok) {
-              data = await data.json();
-              setDetailMember(data);
-              setIsLoading(false);
-          }
-      });
+          setDetailMember(data);
+          setIsLoading(false);
+      })
+      .catch(error => {
+        setDetailMember({});
+        setIsLoading(false);
+    });
   }, [user]);
 
   const detailInfo = () => {

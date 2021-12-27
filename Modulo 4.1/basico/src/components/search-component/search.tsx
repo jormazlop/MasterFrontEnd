@@ -12,14 +12,12 @@ export const Search: React.FC<SearchProps> = (props: SearchProps) => {
 
    const keyPress = (event) => {
        if(event.code === 'Enter') {
-           localStorage.setItem('mySearch', searchInput);
            props.handleSearch(searchInput);
            setSearchInput('');
        }  
    }
 
    const buttonClicked = () => {
-       localStorage.setItem('mySearch', searchInput);
        props.handleSearch(searchInput);
        setSearchInput('');
    }

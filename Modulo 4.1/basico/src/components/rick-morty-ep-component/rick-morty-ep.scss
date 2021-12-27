@@ -1,0 +1,10 @@
+@import '../../shared/colors.scss';
+
+.episodes-info {
+   margin-top: 20px;
+
+   div:nth-child(1) {
+      color: $lemonSecondaryCodeColor;
+   }
+   
+}

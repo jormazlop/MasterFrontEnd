@@ -11,7 +11,7 @@ interface ListState {
 
 export const ListPage: React.FC = () => {
 
-  const [search, setSearch] = React.useState<string>();
+  const [search, setSearch] = React.useState<string>('lemoncode');
 
   const {state}: {state: ListState} = useLocation();
 

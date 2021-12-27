@@ -1,33 +1,31 @@
 import React from "react";
-import './rick-morty-char.scss';
+import './rick-morty-ep.scss';
 import { CircularProgress } from "@mui/material";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
-interface Character {
-   gender: string;
+interface Episode {
+   air_date: string;
+   episode: string;
    id: number;
-   image: string;
    name: string;
-   species: string;
-   status: string;
 }
 
-export const RickMortyCharacters: React.FC = () => {
+export const RickMortyEpisodes: React.FC = () => {
 
-   const [characters, setCharacters] = React.useState<Character[]>([]);
+   const [episodes, setEpisodes] = React.useState<Episode[]>([]);
+
+   const [isLoading, setIsLoading] = React.useState<boolean>(true);
 
    const [page, setPage] = React.useState<number>(1);
 
    const [totalPage, setTotalPage] = React.useState<number>(0);
 
-   const [isLoading, setIsLoading] = React.useState<boolean>(true);
-
    const [next, setNext] = React.useState<string>('');
 
    const [previous, setPrevious] = React.useState<string>('');
 
-   const firstUrl = 'https://rickandmortyapi.com/api/character?page=1';
+   const firstUrl = 'https://rickandmortyapi.com/api/episode?page=1';
 
    const [url, setUrl] = React.useState<string>(firstUrl)
 
@@ -41,19 +39,19 @@ export const RickMortyCharacters: React.FC = () => {
             setTotalPage(data.info.pages);
             setNext(data.info.next);
             setPrevious(data.info.prev);
-            setCharacters(data.results);  
+            setEpisodes(data.results);  
             setIsLoading(false);
         })
         .catch(error => {
-            setTotalPage(0);
-            setNext('');
-            setPrevious('');
-            setCharacters([]);  
-            setIsLoading(false);
+         setTotalPage(0);
+         setNext('');
+         setPrevious('');
+         setEpisodes([]);  
+         setIsLoading(false);
         });
    }, [url]);
 
-   const CharacterList = () => {
+   const EpisodeList = () => {
 
       const list = [];
 
@@ -69,7 +67,7 @@ export const RickMortyCharacters: React.FC = () => {
 
       const handleChange = pageSelected => {
          setPage(pageSelected);
-         const newUrl = 'https://rickandmortyapi.com/api/character?page=' + pageSelected;
+         const newUrl = 'https://rickandmortyapi.com/api/episode?page=' + pageSelected;
          setUrl(newUrl);
       }
 
@@ -86,14 +84,13 @@ export const RickMortyCharacters: React.FC = () => {
 
       if(!isLoading) {
 
-         for (let character of characters) {
-            list.push(<div key={character.id} className="character-item">
-                        <img src={character.image} alt="Character" />
-                        <div className="character-info">
-                           <div>Nombre: {character.name}</div>
-                           <div>Género: {character.gender}</div>
-                           <div>Especie: {character.species}</div>
-                           <div>Estado: {character.status}</div>
+         for (let episode of episodes) {
+            list.push(<div key={episode.id} className="episodes-item">
+                        <div className="episodes-info">
+                           <div>Episodio: {episode.episode}</div>
+                           <hr />
+                           <div>Nombre: {episode.name}</div>
+                           <div>Emitido el : {episode.air_date}</div>
                         </div>
                       </div>);
          }
@@ -104,7 +101,7 @@ export const RickMortyCharacters: React.FC = () => {
                      Pagina<select id="pagina" value={page} onChange={e => handleChange(e.target.value)}>{PageSelector()}</select>de {totalPage}
                      {next?<FontAwesomeIcon icon={faArrowRight} onClick={handleNext}/> : null}
                   </div>
-                  <div className="characters-container">
+                  <div className="episodes-container">
                      {list}
                   </div>
                 </>;
@@ -116,7 +113,7 @@ export const RickMortyCharacters: React.FC = () => {
       }
    }
 
-   return <div className="character-container">
-            {CharacterList()}
+   return <div className="episodes-container">
+            {EpisodeList()}
           </div>;
 }
