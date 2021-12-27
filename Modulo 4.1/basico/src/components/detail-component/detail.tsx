@@ -5,8 +5,8 @@ import { CircularProgress } from "@mui/material";
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-interface MyState {
-  user?: string
+interface DetailState {
+  user?: string;
 }
 
 interface DetailInfo {
@@ -22,7 +22,7 @@ interface DetailInfo {
 
 export const Detail: React.FC = () => {
 
-  const {state}: {state: MyState} = useLocation();
+  const {state}: {state: DetailState} = useLocation();
 
   const {user} = state;
 
@@ -38,7 +38,6 @@ export const Detail: React.FC = () => {
        .then(async (data) => {
           if (data.ok) {
               data = await data.json();
-              console.log(data);
               setDetailMember(data);
               setIsLoading(false);
           }

@@ -1,0 +1,27 @@
+@import '../../shared/colors.scss';
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    align-items: center;
+
+    svg {
+        cursor: pointer;
+        color: $lemonSecondaryCodeColor;
+
+        &:hover {
+            color: $lemonPrimaryCodeColor;
+        }
+    }
+}
+
+.characters-container {
+
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+
+}

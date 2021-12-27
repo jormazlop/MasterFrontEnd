@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 
 interface SearchProps {
-   search: string
+   search: string;
 }
 
 export const List: React.FC<SearchProps> = (props: SearchProps) => {

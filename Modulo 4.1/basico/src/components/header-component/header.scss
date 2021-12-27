@@ -8,8 +8,19 @@
    display: flex;
    align-items: center;
 
-   .return-button {
-      margin-left: 40px;
+   .return-button, .menu-button {
+      margin-left: 30px;
       cursor: pointer;
+      font-size: 20px;
+      color: white;
+
+      &:hover {
+         color: darken($greyColor, 20);
+      }
+   }
+
+   .title {
+      color: white;
+      margin-left: 50px;
    }
 }

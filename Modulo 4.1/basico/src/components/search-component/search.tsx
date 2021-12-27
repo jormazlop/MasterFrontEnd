@@ -1,18 +1,25 @@
 import React from "react";
 import './search.scss';
 
-export const Search: React.FC = (props) => {
+interface SearchProps {
+    handleSearch?: React.FC<string>;
+    search?: string;
+}
 
-   const [searchInput, setSearchInput] = React.useState<String>('lemoncode');
+export const Search: React.FC<SearchProps> = (props: SearchProps) => {
+
+   const [searchInput, setSearchInput] = React.useState<string>(props.search);
 
    const keyPress = (event) => {
        if(event.code === 'Enter') {
+           localStorage.setItem('mySearch', searchInput);
            props.handleSearch(searchInput);
            setSearchInput('');
        }  
    }
 
    const buttonClicked = () => {
+       localStorage.setItem('mySearch', searchInput);
        props.handleSearch(searchInput);
        setSearchInput('');
    }
@@ -21,7 +28,7 @@ export const Search: React.FC = (props) => {
             <input className="search-input" type="text" 
                    onChange={e => setSearchInput(e.target.value)}
                    placeholder="Introducir busqueda aqui..."
-                   maxLength='20'
+                   maxLength={20}
                    onKeyPress={keyPress}
                    value={searchInput}/>
             <button className="search-button" 
