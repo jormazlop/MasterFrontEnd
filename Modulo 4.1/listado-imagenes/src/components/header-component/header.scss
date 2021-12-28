@@ -1,0 +1,31 @@
+@import '../../shared/colors.scss';
+
+.header {
+   height: 80px;
+   width: 100%;
+   background-color: $lemonSecondaryCodeColor;
+   box-shadow: 1px 1px 10px darken($lemonSecondaryCodeColor, 20);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+   .header-home {
+      position: absolute;
+      left: 30px;
+      top: 25px;
+      color: darken($lemonPrimaryCodeColor, 20);
+      font-size: 25px;
+
+      &:hover {
+         cursor: pointer;
+         color: darken($lemonPrimaryCodeColor, 10);
+      }
+   }
+
+   .header-sections button {
+      background-color: darken($lemonPrimaryCodeColor, 20);
+      color: white;
+      border-color: darken($lemonPrimaryCodeColor, 20) !important;
+      font-family: 'Poppins', sans-serif;
+   }
+}

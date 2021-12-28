@@ -1,0 +1,37 @@
+@import '../../shared/colors.scss';
+
+.ordenadores-container {
+
+   display: flex;
+   flex-wrap: wrap;
+   padding: 100px;
+   justify-content: space-around;
+   gap: 20px;
+   font-family: 'Open Sans', sans-serif;
+
+   .ordenador-item {
+
+      border: 1px solid $greyColor;
+      border-radius: 10px;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+
+      img {
+         width: 100px;
+         height: 120px;
+      }
+
+      h1 {
+         margin-top: 30px;
+         font-size: 20px;
+      }
+
+      p {
+         font-size: 15px;
+      }
+   }
+}

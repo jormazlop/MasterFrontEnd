@@ -1,0 +1,25 @@
+@import './shared/colors.scss';
+
+body {
+   margin: 0;
+
+   .app-container {
+      display: flex;
+      overflow: hidden;
+
+      .main-page {
+         width: 100%;
+      }
+
+      .shopping-cart {
+         position: relative;
+         width: 600px;
+         transition-duration: 1s;
+
+         &.closed {
+            width: 100px;
+            transition-duration: 1s;
+         }
+      }
+   }
+}

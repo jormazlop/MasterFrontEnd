@@ -1,0 +1,20 @@
+@import '../../shared/colors.scss';
+
+.home-container {
+   
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 100px;
+   text-align: center;
+   font-family: 'Pushster', cursive;
+   color: darken($lemonPrimaryCodeColor, 20);
+
+   h1 {
+      font-size: 50px;
+   }
+
+   p {
+      font-size: 35px;
+   }
+}

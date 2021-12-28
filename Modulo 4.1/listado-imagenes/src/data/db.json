@@ -1,0 +1,152 @@
+{
+   "ordenadores": [
+    {
+      "id": 1,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/11KG001TSP_pic_1.jpg",
+      "title": "Lenovo V55t",
+      "price": 411
+    },
+     {
+      "id": 2,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/DL-NTW18273_pic_3.jpg",
+      "title": "Netway Prodigy",
+      "price": 495
+    },
+    {
+      "id": 3,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/35W40EA_pic_1.jpg",
+      "title": "HP AIO 24",
+      "price": 762
+    },
+    {
+      "id": 4,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/025NC_pic_2.jpg",
+      "title": "DELL Vostro 3681",
+      "price": 707
+    },
+    {
+      "id": 5,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/9S6-AE0111-014_pic_1.jpg",
+      "title": "MSI AM241",
+      "price": 833
+    },
+    {
+      "id": 6,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/DL-NTW18284_pic_1.jpg",
+      "title": "ASUS TUF Gaming GT301",
+      "price": 1135
+    },
+    {
+      "id": 7,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/9S7-1T3131-083_pic_1.jpg",
+      "title": "MSI Vortex W25",
+      "price": 1493
+    },
+    {
+      "id": 8,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/9S6-B92681-2011_pic_1.jpg",
+      "title": "MSI MEG Trident X",
+      "price": 2684
+    }   
+  ],
+  "portatiles": [
+    {
+      "id": 9,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/90NB0R42-M12500_pic_1.jpg",
+      "title": "ASUS L210MA",
+      "price": 247
+    },
+    {
+      "id": 10,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/82C3001NSP_pic_1.jpg",
+      "title": "Lenovo V V15",
+      "price": 307
+    },
+    {
+      "id": 11,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/2W1D7EA_pic_1.jpg",
+      "title": "HP 255 G8",
+      "price": 416
+    },
+    {
+      "id": 12,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/NX.HT8EB.002_pic_1.jpg",
+      "title": "Acer Aspire 3",
+      "price": 495
+    },
+    {
+      "id": 13,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/W829V_pic_1.jpg",
+      "title": "DELL Vostro 3515",
+      "price": 555
+    },
+    {
+      "id": 14,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/20VG0006SP_pic_1.jpg",
+      "title": "Lenovo ThinkBook 15",
+      "price": 660
+    },
+    {
+      "id": 15,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/S533EA-BN241T_pic_1.jpg",
+      "title": "ASUS VivoBook S15",
+      "price": 762
+    },
+    {
+      "id": 16,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/9RC45GD0MLG101ES800_900_901_pic_1.jpg",
+      "title": "Gigabyte G5",
+      "price": 922
+    }
+  ],
+  "perifericos": [
+    {
+      "id": 17,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/920-007137_pic_1.jpg",
+      "title": "Logitech K400 Plus",
+      "price": 29
+    },
+    {
+      "id": 18,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/4999-823-309_pic_1.jpg",
+      "title": "Jabra Evolve 20SE",
+      "price": 49
+    },
+    {
+      "id": 19,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/SE-E9TW-H_pic_1.jpg",
+      "title": "Pioneer SE-E9TW-H",
+      "price": 66
+    },
+    {
+      "id": 20,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/910-005696_pic_1.jpg",
+      "title": "Logitech MX Master 3",
+      "price": 89
+    },
+    {
+      "id": 21,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/5XH49A_638_pic_1.jpg",
+      "title": "HP Sprocket Select",
+      "price": 133
+    },
+    {
+      "id": 22,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/CD-DSKCAM-C-WW_pic_1.jpg",
+      "title": "Cisco CD-DSKCAM",
+      "price": 199
+    },
+    {
+      "id": 23,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/ADS2200UN1_pic_1.jpg",
+      "title": "Brother ADS-2200",
+      "price": 296
+    },
+    {
+      "id": 24,
+      "picUrl": "https://www.appinformatica.com/icecat/tcnova/DTK1660K0B_pic_1.jpg",
+      "title": "Wacom Cintiq 16",
+      "price": 581
+    }
+  ]
+ }
