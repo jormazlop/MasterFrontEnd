@@ -28,6 +28,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      height: 85vh;
+      overflow-y: overlay;
 
       &.closed {
          opacity: 0;
@@ -60,6 +62,16 @@
    .shopping-total {
       position: fixed;
       top: 90%;
+
+      svg {
+         font-size: 20px;
+         margin-left: 30px;
+
+         &:hover {
+            color: $lemonSecondaryCodeColor;
+            cursor: pointer;
+         }
+      }
    }
 }
 

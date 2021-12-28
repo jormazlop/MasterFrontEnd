@@ -2,8 +2,7 @@ import React from 'react';
 import './shopping-cart.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCircleXmark, faCartShopping, faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 
 import ProductContext from "../../shared/products-context";
@@ -37,7 +36,6 @@ export const ShoppingCart = (props: ShoppingProps) => {
    }
 
    const ShoppingList = () => {
-      console.log(productContext.productList);
 
       const list = [];
 
@@ -47,15 +45,20 @@ export const ShoppingCart = (props: ShoppingProps) => {
          productContext.setProductList(products);
       }
 
+      const handleRemoveAll = () => {
+         productContext.setProductList([]);
+      }
+
       if(productContext.productList) {
 
          let total = 0;
+
          for(const product of productContext.productList) {
 
             total = total + product.price;
 
             list.push(
-               <div className="shopping-item">
+               <div key={product.id} className="shopping-item">
                   <img src={product.picUrl} alt="Product"/>
                   <h1>{product.title}</h1>
                   <p>{product.price}€</p>
@@ -65,7 +68,15 @@ export const ShoppingCart = (props: ShoppingProps) => {
                </div>
             )
          }
-         list.push(<div className="shopping-total">TOTAL : {total}€</div>)
+
+         if (total != 0) {
+            list.push(
+               <div className="shopping-total">
+                  <span>TOTAL : {total}€</span>
+                  <FontAwesomeIcon icon={faCartArrowDown} onClick={handleRemoveAll}/>
+               </div>
+            )
+         }
       }
 
       return <>{list}</>;
