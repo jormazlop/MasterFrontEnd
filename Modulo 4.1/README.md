@@ -40,7 +40,8 @@ _Below is an example of how you can instruct your audience on installing and set
    git clone https://github.com/jormazlop/MasterFrontEnd.git
    ```
 2. Acceder al directorio correcto
-   ```sh cd '.\Modulo 4.1\basico\'
+    ```sh
+   cd '.\Modulo 4.1\basico\'
    ```
    ```sh cd '.\Modulo 4.1\listado-imagenes\'
    ```
