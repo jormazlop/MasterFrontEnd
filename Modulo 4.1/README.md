@@ -31,7 +31,7 @@ El repositorio se compone de 3 aplicaciones:
   <img src="https://user-images.githubusercontent.com/21321737/147680608-0be84fe7-54ed-442c-8b8f-ca22c8927336.png" alt="Basico" width="500" height="200">
 
 
-### Installation
+### Instalación
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
@@ -58,5 +58,15 @@ _Below is an example of how you can instruct your audience on installing and set
    npm start
    ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+### Información adicional
+  
+  Se puede acceder a las aplicaciones desplegadas directamente en los siguientes enlaces:
+  
+  * basico -> https://filtrado-miembros-github.netlify.app/
+  
+  * pedidos -> https://pedidos-lemoncode.netlify.app/
+  
+  * listado-imagenes -> Al usar la libreria json-server en el proyecto, para simular la base de datos, no se puede desplegar directamente en Netlify :(
+  
+<p align="right">(<a href="#top">Volver al principio</a>)</p>
 
