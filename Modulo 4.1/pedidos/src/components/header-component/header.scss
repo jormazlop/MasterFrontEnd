@@ -1,0 +1,28 @@
+@import '../../shared/colors.scss';
+
+$bootstrapColor: #0d6efd;
+
+.header-container {
+
+   padding: 30px 50px;
+   font-family: 'Heebo', sans-serif;
+
+   .header-form {
+      border: 1px solid black;
+      width: 600px;
+      max-height: 400px;
+      padding: 20px;
+   }
+
+   .formCheckbox {
+      position: relative;
+      top: 40px;
+   }
+
+   .formButton {
+      position: relative;
+      top: 10px;
+      left: 75%;
+      box-shadow: 5px 5px 10px 0 $bootstrapColor;
+   }
+}
