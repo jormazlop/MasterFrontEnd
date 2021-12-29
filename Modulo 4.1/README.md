@@ -33,8 +33,6 @@ El repositorio se compone de 3 aplicaciones:
 
 ### Instalación
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
 1. Clonar el repositorio
    ```sh
    git clone https://github.com/jormazlop/MasterFrontEnd.git
