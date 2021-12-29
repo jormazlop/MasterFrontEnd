@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="//images.squarespace-cdn.com/content/v1/56cdb491a3360cdd18de5e16/1536155167931-3JJ7O74IM4QP88L0RQS9/3_200.png?format=400w">
-    <img src="https://images.squarespace-cdn.com/content/v1/56cdb491a3360cdd18de5e16/1536155167931-3JJ7O74IM4QP88L0RQS9/3_200.png?format=400w" alt="Logo" width="400" height="80">
+    <img src="https://images.squarespace-cdn.com/content/v1/56cdb491a3360cdd18de5e16/1536155167931-3JJ7O74IM4QP88L0RQS9/3_200.png?format=400w" alt="Logo" width="300" height="80">
   </a>
 
   <h3 align="center">Best-README-Template</h3>
