@@ -17,7 +17,7 @@ Este repositorio contiene el laboratorio del Modulo 4.1 React, perteneciente al 
 El repositorio se compone de 3 aplicaciones:
 * basico -> Ejercicio básico en el que se va a buscar el listado de miembros de Github de la organización que indique el usuario.
   
-  <img src="https://user-images.githubusercontent.com/21321737/147680097-9c11f37a-aa45-49b1-a0d3-46d969ed7725.png?format=400w" alt="Basico" width="300" height="80">
+  <img src="https://user-images.githubusercontent.com/21321737/147680097-9c11f37a-aa45-49b1-a0d3-46d969ed7725.png" alt="Basico" width="500" height="200">
   
  
 
