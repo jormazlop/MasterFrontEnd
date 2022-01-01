@@ -1,0 +1,4 @@
+<app-public-header *ngIf="!userAdmin"></app-public-header>
+<app-private-header *ngIf="userAdmin"></app-private-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+
+@import './app/shared/variables.scss';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+.gallery-page .carousel-item {
+  transition: transform 1s;
+
+  img {
+    width: 100vw;
+    height: calc(100vh - 120px);
+  }
+
+  h3, p, li {
+    color: $lemonPrimaryCodeColor;
+  }
+}
+
+

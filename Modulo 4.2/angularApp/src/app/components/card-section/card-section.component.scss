@@ -1,0 +1,85 @@
+@import '../../shared/variables.scss';
+
+.card-container {
+  width: 270px;
+  height: 350px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: $greyColor;
+  box-shadow: 4px 4px 10px black;
+  text-align: center;
+  transition-duration: 0.5s;
+
+  .img-no-hover {
+    position: relative;
+    top: -250px;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .img-hover {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .title {
+    position: relative;
+    top: -230px;
+  }
+
+  p {
+    position: relative;
+    top: -230px;
+    opacity: 0;
+    transition-duration: 0.4s;
+  }
+
+  &:hover {
+
+    cursor: pointer;
+    height: 450px;
+    transition-duration: 0.5s;
+
+    p {
+      opacity: 1;
+      transition-duration: 1s;
+      padding: 0 10px;
+    }
+
+    .img-no-hover {
+      opacity: 0;
+      transition-duration: 1s;
+    }
+
+  }
+
+  @media(max-width: $smallSize) {
+    width: 200px;
+    height: 200px;
+
+    .img-no-hover {
+      top: -100px;
+      height: 100px;
+    }
+    .img-hover {
+      height: 100px;
+    }
+
+    .title {
+      position: relative;
+      top: -80px;
+    }
+
+    &:hover {
+
+      height: 200px;
+
+      p {
+        display: none;
+      }
+    }
+
+  }
+}

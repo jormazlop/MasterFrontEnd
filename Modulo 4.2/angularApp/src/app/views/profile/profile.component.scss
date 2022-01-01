@@ -1,0 +1,36 @@
+@import '../../shared/variables.scss';
+
+.profile-page {
+  background-image: url("../../../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 140px);
+  align-items: center;
+
+  .avatar {
+    margin-top: 50px;
+    width: 350px;
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .mail-icon {
+
+    color: $lemonPrimaryCodeColor;
+    font-size: 24px;
+
+    &:hover {
+      cursor: pointer;
+      color: darken($lemonPrimaryCodeColor, 20);
+    }
+
+  }
+
+}

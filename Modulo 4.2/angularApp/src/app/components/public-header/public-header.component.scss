@@ -1,0 +1,32 @@
+@import '../../shared/variables.scss';
+
+.header-container {
+  height: 80px;
+  width: 100%;
+  background-color: $lemonSecondaryCodeColor;
+  box-shadow: 1px 1px 10px darken($lemonSecondaryCodeColor, 20);
+
+  .logo {
+    height: 30px;
+    position: relative;
+    left: 20%;
+    transition-duration: 1s;
+
+    @media(max-width: $smallSize) {
+      height: 20px;
+      left: 20px;
+      transition-duration: 1s;
+    }
+
+  }
+
+  .menu-icon {
+    margin: 0 15px;
+  }
+
+  .login-button {
+    position: absolute;
+    left: 90%;
+  }
+}
+

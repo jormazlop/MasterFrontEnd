@@ -1,0 +1,101 @@
+@import '../../shared/variables.scss';
+
+.faq-container {
+
+  background-image: url("../../../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: calc(100% - 140px);
+  position: relative;
+  top: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card-container-left {
+    width: 500px;
+    height: 600px;
+    border-radius: 20px 0 0 20px;
+
+    .illustration {
+      position: relative;
+      top: 100px;
+      left: -30px;
+    }
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  .card-container-right {
+    width: 500px;
+    height: 600px;
+    border-radius: 0 20px 20px 0;
+
+    @media (max-width: 1000px) {
+      height: 700px;
+      border-radius: 20px;
+      justify-content: center;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px;
+
+    .title {
+      margin-bottom: 30px;
+    }
+
+    .question-container {
+      display: flex;
+      width: 400px;
+      align-items: baseline;
+      flex-wrap: wrap;
+
+        p {
+          width: 350px;
+
+          &.actived {
+            font-weight: bold;
+          }
+        }
+
+        button {
+          background: none;
+          border: none;
+          padding: 0;
+
+          img {
+              width: 10px;
+              height: 10px;
+
+              &.actived {
+                transform: rotate(180deg);
+              }
+
+              &:hover {
+                cursor: pointer;
+              }
+          }
+        }
+
+        div {
+          max-width: 350px;
+          color: darken($greyColor, 30);
+          font-size: 14px;
+
+          &.no-actived {
+            display: none;
+          }
+        }
+
+        hr {
+          width: 100%;
+        }
+    }
+  }
+}

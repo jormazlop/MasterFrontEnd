@@ -1,0 +1,175 @@
+<div class="crud-page">
+
+  <div class="crud-buttons">
+
+    <button class="add-button" (click)="mostrarModalAdd()"><b>+</b></button>
+    <button class="modify-button" (click)="mostrarModalModify()"
+                                  [disabled]="!editEnabled">
+        <b>&#x270D;</b>
+    </button>
+    <button class="delete-button" (click)="mostrarModalDelete()"
+                                  [disabled]="!editEnabled">
+        <b>-</b>
+    </button>
+
+  </div>
+  <div class="data-table">
+    <table datatable [dtOptions]="dtOptions" class="row-border hover">
+      <thead>
+        <tr>
+          <th class="checkbox-header"></th>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Telefono</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let provider of providerList; let i = index">
+          <td><input type="checkbox"
+                     (change)="providerSelected = i"
+                     (click)="onChecked($event)"
+                     [checked]="i===providerSelected"></td>
+          <td>{{provider.code}}</td>
+          <td>{{provider.name}}</td>
+          <td>{{provider.telephone}}</td>
+          <td>{{provider.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<ng-template #addProviderModal let-modal>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Añadir Proveedor</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="modal.close('Cerrado desde la ventana')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text"
+               class="form-control"
+               id="id"
+               required
+               [(ngModel)]="newProvider.code"
+               name="id">
+      </div>
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text"
+               class="form-control" id="name"
+               [(ngModel)]="newProvider.name"
+               name="name">
+      </div>
+      <div class="form-group">
+        <label for="telephone">Telefono</label>
+          <input type="number"
+                 class="form-control" id="telephone"
+                 [(ngModel)]="newProvider.telephone"
+                 name="telephone">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+          <input type="text"
+                 class="form-control" id="email"
+                 [(ngModel)]="newProvider.email"
+                 name="email">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+              (click)="modal.close('Cancelar')">Cancelar</button>
+      <button type="button"
+              class="btn btn-primary"
+              (click)="modal.close('Crear')"
+              [disabled]="!newProvider.code || !newProvider.name || !newProvider.telephone || !newProvider.email">
+          Crear
+      </button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #modifyProviderModal let-modal>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Modificar Proveedor</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="modal.close('Cerrado desde la ventana')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text"
+               class="form-control"
+               id="id"
+               required
+               [(ngModel)]="modifiedProvider.code"
+               name="id">
+      </div>
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text"
+               class="form-control" id="name"
+               [(ngModel)]="modifiedProvider.name"
+               name="name">
+      </div>
+      <div class="form-group">
+        <label for="telephone">Telefono</label>
+          <input type="number"
+                 class="form-control" id="telephone"
+                 [(ngModel)]="modifiedProvider.telephone"
+                 name="telephone">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+          <input type="text"
+                 class="form-control" id="email"
+                 [(ngModel)]="modifiedProvider.email"
+                 name="email">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+              (click)="modal.close('Cancelar')">Cancelar</button>
+      <button type="button"
+              class="btn btn-primary"
+              (click)="modal.close('Modificar')"
+              [disabled]="!modifiedProvider.code || !modifiedProvider.name || !modifiedProvider.telephone || !modifiedProvider.email">
+          Modificar
+      </button>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #deleteProviderModal let-modal>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">¿Estas seguro de querer borrar este proveedor?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="modal.close('Cerrado desde la ventana')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-footer">
+      <button type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+              (click)="modal.close('Cancelar')">No</button>
+      <button type="button"
+              class="btn btn-primary"
+              (click)="modal.close('Si')">
+          Si
+      </button>
+    </div>
+  </div>
+
+</ng-template>

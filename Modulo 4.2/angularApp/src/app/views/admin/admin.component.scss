@@ -1,0 +1,52 @@
+@import '../../shared/variables.scss';
+
+.admin-page {
+
+  background-image: url("../../../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 20px;
+
+  display: flex;
+  height: calc(100% - 140px);
+  justify-content: center;
+  align-items: center;
+
+  @media(max-width: $smallSize) {
+    flex-direction: column;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 560px;
+
+    @media(max-width: $smallSize) {
+      padding: 0;
+    }
+
+    canvas {
+      margin-bottom: 50px;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  .donut-chart {
+    padding: 40px;
+    width: 300px;
+
+    @media(max-width: $smallSize) {
+      width: 250px;
+      padding: 10px;
+    }
+  }
+
+}
+
+

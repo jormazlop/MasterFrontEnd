@@ -1,0 +1,53 @@
+@import '../../shared/variables.scss';
+
+.crud-page {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 20px;
+
+  height: calc(100% - 140px);
+
+  .crud-buttons {
+
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+
+    .add-button, .modify-button, .delete-button {
+      background-color: $lemonSecondaryCodeColor;
+      border-radius: 50%;
+      border: none;
+      color: white;
+      width: 35px;
+      height: 35px;
+      box-shadow: 3px 3px 8px darken($lemonSecondaryCodeColor, 10);
+
+      &:hover {
+        background-color: darken($lemonSecondaryCodeColor, 10);
+      }
+
+      &:disabled {
+        display: none;
+      }
+    }
+  }
+
+  .data-table {
+    padding: 50px;
+    width: 90vw;
+
+    .checkbox-header {
+      padding: 10px 10px;
+      background-image: none !important;
+    }
+  }
+}
+
+

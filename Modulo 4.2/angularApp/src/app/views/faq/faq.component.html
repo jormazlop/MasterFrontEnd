@@ -1,0 +1,78 @@
+<div class="faq-container">
+  <div class="card-container-left">
+    <img class="illustration" src="../../../assets/illustration-woman-online-desktop.svg"/>
+  </div>
+  <div class="card-container-right">
+    <h1 class="title">FAQ</h1>
+    <div class="question-container">
+      <p [ngClass]="{'actived': classActived === 1 ,'no-actived': classActived !== 1}">
+        ¿En que consiste esta aplicación?
+      </p>
+      <button id="1" (click)="buttonClicked(1)">
+        <img [ngClass]="{'actived': classActived === 1 ,'no-actived': classActived !== 1}"
+             src="../../../assets/icon-arrow-down.svg"/>
+      </button>
+      <div [ngClass]="{'actived': classActived === 1 ,'no-actived': classActived !== 1}">
+        Aplicación desarrollada para el laboratorio del modulo de Angular del Master Front End de Lemoncode,
+        y que gestiona una galeria de fotos y un crud, ademas de implementar un sistema de login y routing.
+      </div>
+      <hr/>
+    </div>
+    <div class="question-container">
+      <p [ngClass]="{'actived': classActived === 2 ,'no-actived': classActived !== 2}">
+        ¿Con que usuarios puedo logearme?
+      </p>
+      <button id="2" (click)="buttonClicked(2)">
+        <img [ngClass]="{'actived': classActived === 2 ,'no-actived': classActived !== 2}"
+             src="../../../assets/icon-arrow-down.svg"/>
+        </button>
+        <div [ngClass]="{'actived': classActived === 2 ,'no-actived': classActived !== 2}">
+          Al ser una aplicación de prueba, sin base de datos real,
+          solo se ha añadido verificacion para el usuario master8@lemoncode.net y el password 12345678.
+        </div>
+        <hr/>
+    </div>
+    <div class="question-container">
+      <p [ngClass]="{'actived': classActived === 3 ,'no-actived': classActived !== 3}">
+        ¿Que mas tiene la aplicación?
+      </p>
+      <button id="3" (click)="buttonClicked(3)">
+        <img [ngClass]="{'actived': classActived === 3 ,'no-actived': classActived !== 3}"
+             src="../../../assets/icon-arrow-down.svg"/>
+      </button>
+      <div [ngClass]="{'actived': classActived === 3 ,'no-actived': classActived !== 3}">
+        En principio la idea ha sido implementar las secciones principales de galeria y crud, y luego añadir un par de secciones de faq y about us,
+        asi como dos secciones de admin y profile que solo son accesibles cuando el usuario esta logeado.
+      </div>
+      <hr />
+    </div>
+    <div class="question-container">
+      <p [ngClass]="{'actived': classActived === 4 ,'no-actived': classActived !== 4}">
+        ¿Que librerias se han utilizado para realizar la aplicación?
+      </p>
+      <button id="4" (click)="buttonClicked(4)">
+        <img [ngClass]="{'actived': classActived === 4 ,'no-actived': classActived !== 4}"
+             src="../../../assets/icon-arrow-down.svg"/>
+      </button>
+      <div [ngClass]="{'actived': classActived === 4 ,'no-actived': classActived !== 4}">
+        Las 4 principales librerias externas sobre las cuales me he apoyado han sido Material UI,
+        FontAwesome, Bootstrap y Ng2Charts.
+      </div>
+      <hr/>
+    </div>
+    <div class="question-container">
+      <p [ngClass]="{'actived': classActived === 5 ,'no-actived': classActived !== 5}">
+        ¿En que pagina(s) te has inspirado para hacer la aplicación?
+      </p>
+      <button id="5" (click)="buttonClicked(5)">
+        <img [ngClass]="{'actived': classActived === 5 ,'no-actived': classActived !== 5}"
+             src="../../../assets/icon-arrow-down.svg"/>
+      </button>
+      <div [ngClass]="{'actived': classActived === 5 ,'no-actived': classActived !== 5}">
+        He comenzado usando la pagina facilitada en el enunciado de la practica, https://carherco.es y tambien
+        he usado modelos de otras paginas, como https://www.frontendmentor.io/ para los templates de algunas secciones.
+      </div>
+      <hr/>
+    </div>
+  </div>
+</div>

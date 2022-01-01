@@ -1,0 +1,16 @@
+<div class="login-page">
+  <form #formSend="ngForm" class="login-form" (ngSubmit)="login()">
+    <h1>Login</h1>
+    <input type="text"
+           [(ngModel)]="userLogin.username"
+           name="username"
+           placeholder="Usuario..."/>
+    <input type="password"
+           [(ngModel)]="userLogin.password"
+           name="password"
+           placeholder="Contraseña..."/>
+    <button type="submit"
+            [disabled]="!userLogin.username || !userLogin.password">Log in</button>
+    <p *ngIf="loginError">Error! Usuario/Contraseña incorrectos</p>
+  </form>
+</div>

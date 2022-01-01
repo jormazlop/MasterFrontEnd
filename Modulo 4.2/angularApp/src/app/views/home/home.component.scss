@@ -1,0 +1,42 @@
+@import '../../shared/variables.scss';
+
+.home-page {
+
+  background-image: url("../../../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100% - 140px);
+  position: relative;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px;
+  text-align: center;
+  font-family: 'Pushster', cursive;
+  color: darken($lemonPrimaryCodeColor, 20);
+
+  p {
+    font-size: 35px;
+  }
+
+  .dashboard-button {
+    display: flex;
+    width: 350px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+
+    .dashboard-icon {
+
+      &:hover {
+      color: darken($lemonPrimaryCodeColor, 30);
+      }
+
+      mat-icon {
+        font-size: 30px;
+      }
+    }
+  }
+}

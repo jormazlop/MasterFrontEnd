@@ -1,0 +1,28 @@
+<div class="dashboard-page">
+  <app-card-section [section]="gallerySection"
+                    (click)="onClickGallery()">
+  </app-card-section>
+
+  <app-card-section [section]="crudSection"
+                    (click)="onClickCrud()">
+  </app-card-section>
+
+  <app-card-section [section]="aboutSection"
+                    (click)="onClickAbout()">
+  </app-card-section>
+
+  <app-card-section [section]="faqSection"
+                    (click)="onClickFaq()">
+  </app-card-section>
+
+  <app-card-section *ngIf="this.userAdmin"
+                    [section]="profileSection"
+                    (click)="onClickProfile()">
+  </app-card-section>
+
+  <app-card-section *ngIf="this.userAdmin"
+                    [section]="adminSection"
+                    (click)="onClickAdmin()">
+  </app-card-section>
+
+</div>

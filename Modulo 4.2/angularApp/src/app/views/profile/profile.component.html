@@ -1,0 +1,12 @@
+<div class="profile-page">
+  <img class="avatar"
+       src="https://cdn.pixabay.com/photo/2020/07/14/13/07/icon-5404125_1280.png"
+       alt="Avatar">
+  <h1> Usuario: {{user.username}} </h1>
+  <h1> Tipo de usuario: {{user.type }} </h1>
+  <h1> Registrado desde: {{date | date}}</h1>
+  <h1> Numero de contactos: {{contacts}}</h1>
+  <a href="mailto:{{user.username}}">
+    <fa-icon class="mail-icon" [icon]="faTelegramPlane"></fa-icon>
+  </a>
+</div>
