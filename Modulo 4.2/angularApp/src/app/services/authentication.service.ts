@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../models/user.model';
+import { of, merge } from 'rxjs';
+import { mapTo, delay } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
@@ -17,7 +19,9 @@ export class AuthenticationService {
     return this.currentUserSubject;
   }
 
-  login(username: string, password: string): boolean {
+  login(username: string, password: string): Observable<boolean> {
+
+    const example = of(null);
 
     if(username === 'master8@lemoncode.net' && password === '12345678') {
 
@@ -27,10 +31,10 @@ export class AuthenticationService {
         type: 'admin'
       });
       localStorage.setItem('currentUser', 'master8');
-      return true;
+      return example.pipe(mapTo(true), delay(2000));
     }
 
-    return false;
+    return example.pipe(mapTo(false), delay(2000));
   }
 
   isAuthenticated(): boolean {

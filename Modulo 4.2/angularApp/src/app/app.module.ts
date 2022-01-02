@@ -22,6 +22,7 @@ import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 // FontAwesome
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -63,6 +64,7 @@ import { DataTablesModule } from "angular-datatables";
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
+    MatProgressSpinnerModule,
     MatButtonModule,
     FontAwesomeModule,
     NgChartsModule,

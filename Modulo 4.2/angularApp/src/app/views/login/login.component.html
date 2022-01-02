@@ -10,7 +10,9 @@
            name="password"
            placeholder="Contraseña..."/>
     <button type="submit"
+            *ngIf="!isLoading"
             [disabled]="!userLogin.username || !userLogin.password">Log in</button>
+    <mat-spinner *ngIf="isLoading" [diameter]="30" color="accent"></mat-spinner>
     <p *ngIf="loginError">Error! Usuario/Contraseña incorrectos</p>
   </form>
 </div>
