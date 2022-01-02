@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
+import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 
 @Component({
@@ -71,14 +71,6 @@ export class AdminComponent implements OnInit {
 
   @ViewChild(BaseChartDirective) chart?: BaseChartDirective;
 
-  public chartClicked({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
-    console.log(event, active);
-  }
-
-  public chartHovered({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
-    console.log(event, active);
-  }
-
   public hideOne(): void {
     const isHidden = this.chart?.isDatasetHidden(1);
     this.chart?.hideDataset(1, !isHidden);
@@ -95,8 +87,8 @@ export class AdminComponent implements OnInit {
     this.chart?.update();
   }
 
-   // Donut
    public doughnutChartLabels: string[] = [ 'Usuarios', 'Sesiones', 'Numero de sesiones por usuario' ];
+
    public doughnutChartData: ChartData<'doughnut'> = {
      labels: this.doughnutChartLabels,
      datasets: [
@@ -105,14 +97,7 @@ export class AdminComponent implements OnInit {
        { data: [ 30, 207, 10 ] }
      ]
    };
+
    public doughnutChartType: ChartType = 'doughnut';
-
-   public donutChartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
-     console.log(event, active);
-   }
-
-   public donutChartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
-     console.log(event, active);
-   }
 
 }

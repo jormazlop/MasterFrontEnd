@@ -48,7 +48,6 @@ export class CrudComponent implements OnInit, OnDestroy {
 
     this.providerSubscription = this.providerService.currentProvidersValue.subscribe(providers => {
       this.providerList = providers;
-      console.log(this.providerList);
     });
 
   }
