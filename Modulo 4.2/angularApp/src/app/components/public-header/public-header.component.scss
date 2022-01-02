@@ -2,7 +2,6 @@
 
 .header-container {
   height: 80px;
-  width: 100%;
   background-color: $lemonSecondaryCodeColor;
   box-shadow: 1px 1px 10px darken($lemonSecondaryCodeColor, 20);
 
@@ -21,7 +20,7 @@
   }
 
   .menu-icon {
-    margin: 0 15px;
+    margin: 0 15px 0 0;
   }
 
   .login-button {

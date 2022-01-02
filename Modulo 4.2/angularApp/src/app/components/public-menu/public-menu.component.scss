@@ -1,0 +1,58 @@
+@import '../../shared/variables.scss';
+
+.modal-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20%;
+
+  animation-name: modalMenu;
+  animation-duration: 0.3s;
+
+  .modal-header {
+    border: none;
+    text-align: center;
+
+    h1 {
+      font-size: 30px;
+      color: darken($lemonPrimaryCodeColor, 20);
+    }
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .menu-section {
+      display: flex;
+      width: 150px;
+      justify-content: space-around;
+      align-items: center;
+      color: darken($lemonPrimaryCodeColor, 20);
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .menu-icon:hover {
+        color: $lemonPrimaryCodeColor;
+      }
+    }
+  }
+}
+
+@media(max-width: 1000px) {
+  h1 {
+    display: none;
+  }
+}
+
+@keyframes modalMenu {
+  0%   {transform: scale(0)}
+  75%  {transform: scale(0)}
+  100% {transform: scale(0)}
+}
+
+

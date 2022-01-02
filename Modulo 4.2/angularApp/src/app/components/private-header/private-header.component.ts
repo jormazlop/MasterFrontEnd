@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
@@ -10,6 +10,8 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 export class PrivateHeaderComponent implements OnInit {
 
   username:string | null;
+
+  @Output('openMenu') openMenu: EventEmitter<string> = new EventEmitter<string>();
 
   constructor(
     private router: Router,
@@ -29,6 +31,10 @@ export class PrivateHeaderComponent implements OnInit {
   logout(): void {
     this.authentication.logout();
     this.router.navigate(['/home']);
+  }
+
+  menu(): void {
+    this.openMenu.emit();
   }
 
 }

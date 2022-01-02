@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/c
 import { Subscription } from 'rxjs';
 import { Provider } from 'src/app/models/provider.model';
 import { ProvidersService } from 'src/app/services/providers.service';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-crud',

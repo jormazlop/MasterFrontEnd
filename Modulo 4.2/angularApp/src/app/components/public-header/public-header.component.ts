@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./public-header.component.scss']
 })
 export class PublicHeaderComponent implements OnInit {
+
+  @Output('openMenu') openMenu: EventEmitter<string> = new EventEmitter<string>();
 
   constructor(private router: Router) { }
 
@@ -19,6 +21,10 @@ export class PublicHeaderComponent implements OnInit {
 
   login(): void {
     this.router.navigate(['/login']);
+  }
+
+  menu(): void {
+    this.openMenu.emit();
   }
 
 }

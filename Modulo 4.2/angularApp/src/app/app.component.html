@@ -1,4 +1,13 @@
-<app-public-header *ngIf="!userAdmin"></app-public-header>
-<app-private-header *ngIf="userAdmin"></app-private-header>
+<app-public-header *ngIf="!userAdmin" (openMenu)="openPublicMenu()"></app-public-header>
+<app-private-header *ngIf="userAdmin" (openMenu)="openPrivateMenu()"></app-private-header>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+
+<ng-template #menuPublicModal let-modal>
+  <app-public-menu (closeMenu)="modal.close('Cerrado desde la ventana')"></app-public-menu>
+</ng-template>
+
+<ng-template #menuPrivateModal let-modal>
+  <app-private-menu (closeMenu)="modal.close('Cerrado desde la ventana')"></app-private-menu>
+</ng-template>
+

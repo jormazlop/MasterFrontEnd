@@ -1,6 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,10 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
+  @ViewChild("menuPublicModal", {static: false}) menuPublicModal: TemplateRef<any>;
+
+  @ViewChild("menuPrivateModal", {static: false}) menuPrivateModal: TemplateRef<any>;
+
   title = 'angularApp';
 
   userAdmin: boolean;
@@ -16,7 +21,8 @@ export class AppComponent implements OnInit, OnDestroy {
   userSubscription: Subscription;
 
   constructor(
-    private authentication: AuthenticationService
+    private authentication: AuthenticationService,
+    private modalService: NgbModal
   ) {}
 
   ngOnInit(): void {
@@ -26,6 +32,16 @@ export class AppComponent implements OnInit, OnDestroy {
       this.userAdmin = user.type === 'admin'? true: false;
     });
 
+  }
+
+  openPublicMenu(): void {
+    this.modalService.open(this.menuPublicModal, { windowClass: 'no-animation-modal'}).result.then( r => {
+    }, error => {});
+  }
+
+  openPrivateMenu(): void {
+    this.modalService.open(this.menuPrivateModal, { windowClass: 'no-animation-modal'}).result.then( r => {
+    }, error => {});
   }
 
   ngOnDestroy() {

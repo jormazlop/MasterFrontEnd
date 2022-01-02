@@ -1,1 +1,37 @@
-<p>public-menu works!</p>
+<div class="modal-content" id="menuPublicModal">
+  <div class="modal-header">
+    <h1>Secciones</h1>
+      <button type="button" class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="modal-body">
+    <div class="menu-section">
+      <h1>Galeria</h1>
+      <button mat-icon-button class="menu-icon" (click)="onClickGallery()">
+        <mat-icon>photo</mat-icon>
+      </button>
+    </div>
+    <div class="menu-section">
+      <h1>Crud</h1>
+      <button mat-icon-button class="menu-icon" (click)="onClickCrud()">
+        <mat-icon>list</mat-icon>
+      </button>
+    </div>
+    <div class="menu-section">
+      <h1>Acerca de</h1>
+      <button mat-icon-button class="menu-icon" (click)="onClickAbout()">
+        <mat-icon>question_answer</mat-icon>
+      </button>
+    </div>
+    <div class="menu-section">
+      <h1>FAQ</h1>
+      <button mat-icon-button class="menu-icon" (click)="onClickFAQ()">
+        <mat-icon>contact_support</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
