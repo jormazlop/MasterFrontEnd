@@ -23,6 +23,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { RotatingImgDirective } from './directives/rotating-img.directive';
 
 // FontAwesome
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -38,6 +39,7 @@ import { NgChartsModule } from 'ng2-charts';
 
 // Data-tables
 import { DataTablesModule } from "angular-datatables";
+
 
 @NgModule({
   declarations: [
@@ -56,7 +58,8 @@ import { DataTablesModule } from "angular-datatables";
     ProfileComponent,
     CardSectionComponent,
     FaqComponent,
-    AdminComponent
+    AdminComponent,
+    RotatingImgDirective
   ],
   imports: [
     BrowserModule,
