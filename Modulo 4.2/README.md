@@ -17,7 +17,7 @@ Este repositorio contiene el laboratorio del Modulo 4.2 Angular, perteneciente a
 El repositorio se compone de 1 sola aplicación:
 * angularApp -> Aplicacion con multiples secciones, una galeria de fotos, un crud, sistema de loging y routing, etc.
   
-  <img src="https://user-images.githubusercontent.com/21321737/147984647-5cc2e76f-44e1-4b12-aea8-faa6959eb863.png" alt="Basico" width="500" height="350">
+  <img src="https://user-images.githubusercontent.com/21321737/147984647-5cc2e76f-44e1-4b12-aea8-faa6959eb863.png" alt="Basico" width="600" height="350">
 
 
 
