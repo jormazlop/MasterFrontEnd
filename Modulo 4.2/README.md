@@ -43,7 +43,7 @@ El repositorio se compone de 1 sola aplicación:
   
 ### Información adicional
   
-  Se ha aplicado la directiva de rotacion al logo y al titulo de la pagina home, al clickar sobre ellos rotan en una dirección, y al dejar pulsado shift rota para el lado      contrario.
+  Se ha aplicado la directiva de rotacion al logo y al titulo de la pagina home, al clickar sobre ellos rotan en una dirección, y al dejar pulsado shift rotan para el lado      contrario.
   
   <img src="https://user-images.githubusercontent.com/21321737/147985505-96b6cd2d-d251-4393-9778-9484564b9f2f.png" alt="Basico" width="300" height="150">
 
