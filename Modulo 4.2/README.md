@@ -44,7 +44,7 @@ El repositorio se compone de 1 sola aplicación:
   
   Se puede acceder a la aplicació desplegada directamente en el siguiente enlace:
   
-  * https://modulo-4-angular.netlify.app/home
+  * https://modulo-4-angular.netlify.app/
   
   
 <p align="right">(<a href="#top">Volver al principio</a>)</p>
