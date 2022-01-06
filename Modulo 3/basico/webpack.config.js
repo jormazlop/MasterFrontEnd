@@ -62,7 +62,7 @@ module.exports = {
        new HtmlWebpackPlugin({
          filename: 'index.html', 
          template: 'index.html',
-         title: 'Listado Github',
+         title: 'Bundling con Webpack',
          favicon: './assets/logo-lemoncode.png'
         }),
         new MiniCssExtractPlugin({
